@@ -1,3 +1,4 @@
+//1
 class Robot {
     work(){
         console.log("Я Robot – я просто працюю");
@@ -32,3 +33,5 @@ let robotArray = [
 robotArray.forEach(element => {
     element.work();
 });
+
+
