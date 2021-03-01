@@ -17,7 +17,7 @@ class RobotDancer extends Robot {
     }
 }
 
-class RobotCoocker extends Robot {
+class RobotCooker extends Robot {
     work(){
         console.log("Я RobotCooker – я просто готую");
     }
@@ -27,7 +27,7 @@ let robotArray = [
     new Robot(),
     new CoffeeRobot(),
     new RobotDancer(),
-    new RobotCoocker()
+    new RobotCooker()
 ];
 
 robotArray.forEach(element => {

@@ -1,3 +1,4 @@
+//2
 function Robot() {
     this.name;
     this.act;
@@ -8,7 +9,7 @@ Robot.prototype.construct = function Robot(name, act) {
     this.act = act;
 }
 
-Robot.prototype.construct("Robot", " - просто працюю");
+Robot.prototype.construct("Robot", " просто працюю");
 
 Robot.prototype.work = function work() {
     console.log("Я " + this.name + " - я " + this.act + "!");
@@ -20,11 +21,11 @@ CoffeeRobot.prototype.constructor = CoffeeRobot;
 
 CoffeeRobot.prototype.construct("CoffeeRobot", " варю каву");
 
-function RobotDanser() {}
-RobotDanser.prototype = Object.create(Robot.prototype);
-RobotDanser.prototype.constructor = RobotDanser;
+function RobotDancer() {}
+RobotDancer.prototype = Object.create(Robot.prototype);
+RobotDancer.prototype.constructor = RobotDancer;
 
-RobotDanser.prototype.construct("RobotDancer", "просто танцюю");
+RobotDancer.prototype.construct("RobotDancer", "просто танцюю");
 
 function RobotCooker() {}
 RobotCooker.prototype = Object.create(Robot.prototype);
@@ -34,9 +35,9 @@ RobotCooker.prototype.construct("RobotCooker", " просто готую");
 
 console.log();
 
-let robotArray = [new Robot(),new CoffeeRobot(),new RobotDanser(),new RobotCooker() ];
+let robotArray = [new Robot(),new CoffeeRobot(),new RobotDancer(),new RobotCooker() ];
 
 
-for (let i = 0; i < robotArray.length; i++) {
-    robotArray[i].work();
-}
+robotArray.forEach(element => {
+    element.work();
+});
